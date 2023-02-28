@@ -1,6 +1,6 @@
 import { act, fireEvent, render } from '@testing-library/react';
 
-import HomePage from '../../app/page';
+import HomePage from '../../pages';
 
 describe('SLIDERS', () => {
   it('should call onChangeTransfer when the storage slider is changed', async () => {

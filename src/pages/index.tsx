@@ -4,7 +4,8 @@ import { ChangeEvent, useState } from 'react';
 import { Companies } from '@components/Companies';
 import { Sliders } from '@components/Sliders';
 
-import styles from './MainPage.module.scss';
+import styles from '../styles/MainPage.module.scss';
+import Head from 'next/head';
 
 export const HomePage = () => {
   const [storage, setStorage] = useState<number>(1000);
@@ -19,7 +20,10 @@ export const HomePage = () => {
   };
 
   return (
-    <div className={styles.root}>
+    <main className={styles.root}>
+      <Head>
+        <title>TEST TASK</title>
+      </Head>
       <Sliders
         storage={storage}
         transfer={transfer}
@@ -27,7 +31,7 @@ export const HomePage = () => {
         onChangeTransfer={onChangeTransfer}
       />
       <Companies storage={storage} transfer={transfer} />
-    </div>
+    </main>
   );
 };
 

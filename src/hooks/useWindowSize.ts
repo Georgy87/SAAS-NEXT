@@ -1,4 +1,3 @@
-'use client';
 import { useEffect, useState } from 'react';
 
 type SizeData = {
@@ -8,8 +7,8 @@ type SizeData = {
 
 export const useWindowSize = (): SizeData => {
   const [size, setSize] = useState<SizeData>({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: global.innerWidth,
+    height: global.innerHeight,
   });
 
   const resizeHanlder = () => {
@@ -23,8 +22,10 @@ export const useWindowSize = (): SizeData => {
   };
 
   useEffect(() => {
-    window.addEventListener('resize', resizeHanlder);
-
+    if (typeof window !== 'undefined') { 
+      window.addEventListener('resize', resizeHanlder);
+    }
+   
     return () => {
       window.removeEventListener('resize', resizeHanlder);
     };
