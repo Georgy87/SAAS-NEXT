@@ -1,11 +1,11 @@
 'use client';
 import { ChangeEvent, useState } from 'react';
+import Head from 'next/head';
 
 import { Companies } from '@components/Companies';
 import { Sliders } from '@components/Sliders';
 
 import styles from '../styles/MainPage.module.scss';
-import Head from 'next/head';
 
 export const HomePage = () => {
   const [storage, setStorage] = useState<number>(1000);

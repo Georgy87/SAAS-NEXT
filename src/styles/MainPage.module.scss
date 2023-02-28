@@ -1,8 +1,8 @@
 @import '../styles/variebles.scss';
 .root {
   margin: 0 auto;
-  background-color: #f4f9f9;
   min-height: 100vh;
+  background-color: #f4f9f9;
   overflow-y: hidden;
   font-family: "Eudoxus Sans", sans-serif;
   @media screen and (max-width: $screen-width-960) {
