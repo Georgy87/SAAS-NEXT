@@ -11,7 +11,7 @@ import { BunnyIcon } from '@components/Icons/BunnyIcon';
 import { ScalewayIcon } from '@components/Icons/Scaleway';
 import { VultrIcon } from '@components/Icons/Vultr';
 import { Input } from '@components/Input/Input';
-import { svgService } from '@/services/svgService';
+import { svgService } from '@services/svgService';
 
 import styles from './Companies.module.scss';
 
