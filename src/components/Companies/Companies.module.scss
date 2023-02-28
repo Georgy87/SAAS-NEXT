@@ -1,0 +1,120 @@
+@import "../../styles/variebles.scss";
+
+.companiesContainer {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  margin-top: 80px;
+  border-radius: 10px;
+  padding: 40px;
+  align-items: center;
+  background-color: #fff;
+  .companies {
+    margin-right: 15px;
+    ul {
+      list-style: none;
+      padding-top: 5px;
+      margin: 0;
+      li {
+        margin-top: 5px;
+        height: 94px;
+        font-weight: 500;
+        font-size: 20px;
+        text-align: start;
+        width: 200px;
+        .customInputsBlock {
+          display: flex;
+          font-weight: 300;
+          font-size: 10px;
+          margin-top: 2px;
+          color: #4a9892;
+          input[type="checkbox"] {
+            appearance: none;
+            background-color: #fff;
+            margin: 0;
+            margin-top: 2px;
+            font: inherit;
+            color: currentColor;
+            width: 0.8em;
+            height: 0.8em;
+            border: 0.15em solid currentColor;
+            border-radius: 1em;
+          }
+          input[type="checkbox"]:checked {
+            background-color: #9be6df;
+            transform: scale(1);
+          }
+          .options {
+            display: flex;
+            flex-direction: column;
+          }
+          .optionsEnd {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+          }
+          @media screen and (max-width: $screen-width-960) {
+            order: 3;
+          }
+        }
+        .companyName {
+          order: 2;
+        }
+        svg {
+          width: 50px;
+          height: 50px;
+          order: 4;
+          display: inline-block;
+          float: right;
+          text-align: end;
+        }
+        @media screen and (max-width: $screen-width-960) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          position: relative;
+          height: 130px;
+          .companyName {
+            display: flex;
+            justify-content: center;
+          }
+          svg {
+            position: absolute;
+            bottom: 0;
+          }
+        }
+        @media screen and (max-width: $screen-width-414) {
+          font-size: 12px;
+        }
+      }
+      @media screen and (max-width: $screen-width-960) {
+        display: flex;
+        justify-content: center;
+        width: 500px;
+        padding: 0;
+        padding-right: 0px;
+      }
+      @media screen and (max-width: $screen-width-414) {
+        margin-right: 0;
+        width: 300px;
+      }
+    }
+    @media screen and (max-width: $screen-width-960) {
+      width: 500px;
+      order: 2;
+    }
+  }
+  @media screen and (max-width: $screen-width-960) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    order: 2;
+    margin-top: -70px;
+    width: 80%;
+  }
+}
+
+.chartsContainer {
+  margin-top: 20px;
+  padding: 5px;
+}

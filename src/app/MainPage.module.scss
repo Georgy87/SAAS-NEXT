@@ -1,0 +1,14 @@
+@import '../styles/variebles.scss';
+.root {
+  margin: 0 auto;
+  background-color: #f4f9f9;
+  min-height: 100vh;
+  overflow-y: hidden;
+  @media screen and (max-width: $screen-width-960) {
+    display: flex;
+    flex-wrap: wrap-reverse;
+  }
+  @media screen and (max-width: $screen-width-414) {
+    overflow-x: hidden;
+  }
+}
